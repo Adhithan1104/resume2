@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>AI Resume Builder</h1>
+    <form method="POST">
+        <input name="name" placeholder="Name" required><br>
+        <textarea name="education" placeholder="Education" required></textarea><br>
+        <textarea name="experience" placeholder="Experience" required></textarea><br>
+        <textarea name="skills" placeholder="Skills" required></textarea><br>
+        <button type="submit">Analyze Resume</button>
+    </form>
+
+    {% if result %}
+        <h2>AI Feedback:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
